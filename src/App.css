@@ -1,27 +1,29 @@
 :root {
-  --color-1: #0b132b;
-  --color-2: #1c2541;
-  --color-3: #3a506b;
-  --color-4: #5bc0be;
-  --color-5: #6fffe9;
+  --body-bg: #3a506b;
+  --header-bg: #022b3a;
+  --header-text: #bfdbf7;
+  --body-text: #a3bac3;
+  --body-header: #ffffff;
 }
 
 .App {
   text-align: center;
-  background-color: var(--color-1);
-  color: var(--color-4);
+  background-color: var(--body-bg);
+  color: var(--body-header);
   min-height: 100vh;
 }
 
+p {
+  color: var(--body-text);
+}
+
 .App-header {
-  background-color: var(--color-3);
+  background-color: var(--header-bg);
   min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: var(--color-2);
-  border-top: 5px solid var(--color-4);
-  border-bottom: 5px solid var(--color-4);
+  color: var(--header-text);
+  border-bottom: 1px solid var(--body-header);
 }
