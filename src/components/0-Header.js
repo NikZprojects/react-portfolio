@@ -1,6 +1,6 @@
 const Header = () => (
   <header className="App-header">
-    <p>Header</p>
+    <h3>Header</h3>
   </header>
 );
 
