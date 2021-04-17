@@ -1,8 +1,9 @@
 :root {
   --body-bg: #3a506b;
+  /* --body-bg: #333f4f; */
   --header-bg: #022b3a;
-  --header-text: #bfdbf7;
-  --body-text: #a3bac3;
+  --header-text: #a7cdfb;
+  --body-text: #d2e7fe;
   --body-header: #ffffff;
 }
 
