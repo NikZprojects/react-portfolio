@@ -1,6 +1,5 @@
 const About = () => (
   <div>
-    <h3>Hi there. I'm Nik.</h3>
     <h1>About</h1>
     <div className="textblock">
       <p>

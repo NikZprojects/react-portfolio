@@ -7,51 +7,14 @@
   --body-header: #ffffff;
 }
 
+@media screen and (max-width: 766px) {
+  /* Mobile only */
+}
 .App {
   text-align: center;
   background-color: var(--body-bg);
   color: var(--body-header);
   min-height: 100vh;
-}
-
-form {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 80%;
-}
-input,
-textarea {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-button {
-  width: 100%;
-  background-color: #a7cdfb;
-  color: #022b3a;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.textblock {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 80%;
-}
-
-p {
-  text-align: left;
-  color: var(--body-text);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50rem;
 }
 
 .App-header {
@@ -65,4 +28,84 @@ p {
   grid-template-columns: 2fr 2fr 6fr 2fr;
   color: var(--header-text);
   border-bottom: 1px solid var(--body-header);
+}
+
+.outerblock {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+}
+
+/* About */
+p {
+  text-align: left;
+  color: var(--body-text);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Projects */
+.split {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 6fr, 6fr;
+}
+.half {
+  display: inline-block;
+  width: 100%;
+}
+img {
+  max-width: 80%;
+  border: 1px solid #ddd;
+
+  padding: 5px;
+}
+
+.button {
+  padding: 10px;
+  width: 20%;
+  background-color: #a7cdfb;
+  text-decoration: none;
+  color: #022b3a;
+  padding: 14px 20px;
+  margin: 8px 8px;
+  border: 2px solid #022b3a;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* Contact */
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background-color: #022b3a;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+button {
+  width: 100%;
+  background-color: #a7cdfb;
+  color: #022b3a;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* Footer */
+.footer {
+  position: relative;
+  padding: 10px;
+  margin: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #d2e7fe;
+  text-align: center;
 }

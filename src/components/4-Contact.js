@@ -1,7 +1,7 @@
 const Contact = () => (
   <div>
     <h1>Contact</h1>
-    <form autocomplete="false">
+    <form autoComplete="false">
       <input placeholder="Name" />
       <input placeholder="Subject" />
       <input placeholder="Email" />
