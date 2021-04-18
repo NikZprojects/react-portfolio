@@ -1,6 +1,7 @@
 const About = () => (
   <div>
     <h3>Hi there. I'm Nik.</h3>
+    <h1>About</h1>
     <p>
       I started programming in late 2019 as a way to diversify my current
       skillset. It didn't take long before I found a passion for building things
