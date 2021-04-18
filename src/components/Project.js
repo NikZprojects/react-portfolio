@@ -1,30 +1,16 @@
-const Project = () => (
+const Project = ({ name, description, imgsrc, github, link }) => (
   <div className="split">
     <div className="half">
-      <img
-        src={process.env.PUBLIC_URL + "/img/reacthabittracker.jpg"}
-        alt="React habit tracker"
-      />
+      <img src={process.env.PUBLIC_URL + imgsrc} alt={name} />
     </div>
     <div className="half">
-      <h2>React Habit Tracker</h2>
-      <p>
-        A habit tracker built with the ability to save data thanks to Google
-        authentication, an Express API, and a MongoDB database.
-      </p>
+      <h2>{name}</h2>
+      <p>{description}</p>
       <div className="split">
-        <a
-          href="https://github.com/NikZprojects/React-Habit-Tracker"
-          className="button"
-          target="_blank"
-        >
+        <a href={github} className="button" target="_blank" rel="noreferrer">
           Github
         </a>
-        <a
-          href="https://www.nikzprojects.com/React_Habit_Tracker"
-          className="button"
-          target="_blank"
-        >
+        <a href={link} className="button" target="_blank" rel="noreferrer">
           Link
         </a>
       </div>
