@@ -1,6 +1,6 @@
 const Footer = () => (
   <div>
-    <h1>Footer</h1>
+    <p className="footer"> Nik Zagarella © 2021</p>
   </div>
 );
 
