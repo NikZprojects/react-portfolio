@@ -1,24 +1,21 @@
 const About = () => (
   <div>
-    <h1>About</h1>
+    <h3>Hi there. I'm Nik.</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-      ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-      dis parturient montes, nascetur ridiculus mus.
+      I started programming in late 2019 as a way to diversify my current
+      skillset. It didn't take long before I found a passion for building things
+      online.
     </p>
     <p>
-      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-      consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
-      vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis
-      vitae, justo.
+      I first built a simple Flask website to share some of my Python scripts in
+      a web format. From there, I designed and built a food blog with Django at
+      CookwithChemistry.com
     </p>
     <p>
-      Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-      dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-      Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-      Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-      viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-      Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+      From there I built a single page React app to search through a friend's
+      Instagram page. Most recently I designed and built a habit tracker with
+      the MERN (MongoDB, Express, React, Node) stack, as a way to track my own
+      habits and share how I do so with others.
     </p>
   </div>
 );
