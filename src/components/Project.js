@@ -1,7 +1,9 @@
 const Project = ({ name, description, imgsrc, github, link }) => (
   <div className="split">
     <div className="half">
-      <img src={process.env.PUBLIC_URL + imgsrc} alt={name} />
+      <a href={link} target="_blank" rel="noreferrer">
+        <img src={process.env.PUBLIC_URL + imgsrc} alt={name} />
+      </a>
     </div>
     <div className="half">
       <h2>{name}</h2>

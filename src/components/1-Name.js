@@ -1,6 +1,6 @@
 const Name = () => (
   <div>
-    <h2>Hello there. I am Nik.</h2>
+    <h2>Hi there. I'm Nik.</h2>
   </div>
 );
 
