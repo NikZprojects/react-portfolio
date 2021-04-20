@@ -5,7 +5,7 @@ const projects = [
     name: "React Habit Tracker",
     description:
       "A full-stack React habit tracker app built with the ability to save data thanks to Google authentication, an Express API, and a MongoDB database.",
-    imgsrc: "/img/reacthabittracker.jpg",
+    imgsrc: "static/img/reacthabittracker.jpg",
     github: "https://github.com/NikZprojects/React-Habit-Tracker",
     link: "https://www.nikzprojects.com/React_Habit_Tracker",
   },
@@ -13,7 +13,7 @@ const projects = [
     name: "Instagram Search Bar",
     description:
       "A single page React app search bar built to search through a friend's Instagram recipes. Node backend makes calls to the Instagram Basic Display API to keep everything up-to-date.",
-    imgsrc: "img/instagram.jpg",
+    imgsrc: "static/img/instagram.jpg",
     github: "https://github.com/NikZprojects/Instagram-Search-Bar",
     link: "https://instagram.nikzprojects.com/",
   },
@@ -21,7 +21,7 @@ const projects = [
     name: "Food Blog Website",
     description:
       "A full-stack Django website built to share my recipes. A responsive website that Bootstrap to style and scale the elements on the page.",
-    imgsrc: "img/cookwithchemistry-2.jpg",
+    imgsrc: "static/img/cookwithchemistry-2.jpg",
     github: "https://github.com/NikZprojects/Food-Blog-Django",
     link: "https://www.cookwithchemistry.com",
   },
