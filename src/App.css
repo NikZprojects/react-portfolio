@@ -8,8 +8,36 @@
   --hover: #fa9d64;
 }
 
-@media screen and (max-width: 766px) {
-  /* Mobile only */
+@media screen and (max-width: 1000px) {
+  .split {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 8px auto;
+  }
+  .outerblock {
+    width: 90%;
+  }
+  .header-block {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .split {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 6fr 6fr;
+    margin: 15px auto;
+  }
+  .outerblock {
+    width: 70%;
+  }
+  .header-block {
+    width: 70%;
+  }
 }
 .App {
   text-align: center;
@@ -47,14 +75,13 @@
 .header-block {
   display: grid;
   grid-template-columns: 2fr 2fr 6fr 2fr;
-  width: 70%;
   max-width: 1500px;
 }
 
 .outerblock {
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+
   max-width: 1500px;
 }
 
@@ -71,12 +98,14 @@ p {
 }
 
 /* Projects */
-.split {
-  width: 100%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 6fr, 6fr;
+h1 {
+  margin: 15px;
+}
+h2 {
+  margin: 10px;
+}
+h3 {
+  margin: 10px;
 }
 .half {
   display: inline-block;
@@ -86,18 +115,21 @@ img {
   width: 80%;
   max-width: 500px;
   border: 1px solid #ddd;
-  margin: 5% auto;
-  padding: 5px;
+  margin-top: 15px;
+  /* margin: 5% auto; */
+  /* padding: 5px; */
 }
 
 .button {
   padding: 10px;
   width: 20%;
+  min-width: 80px;
   background-color: #a7cdfb;
   text-decoration: none;
+  text-align: center;
   color: #022b3a;
   padding: 10px 20px;
-  margin: 8px 8px;
+  margin: 15px 8px 20px;
   border: 2px solid #022b3a;
   border-radius: 4px;
   cursor: pointer;
