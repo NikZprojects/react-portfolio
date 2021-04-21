@@ -92,7 +92,7 @@ h3 {
 }
 /* About */
 p {
-  text-align: left;
+  text-align: justify;
   color: var(--body-text);
   margin-left: auto;
   margin-right: auto;
