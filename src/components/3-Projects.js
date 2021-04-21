@@ -20,7 +20,7 @@ const projects = [
   {
     name: "Food Blog Website",
     description:
-      "A full-stack Django website built to share my recipes. A responsive website that Bootstrap to style and scale the elements on the page.",
+      "A full-stack Django website built to share my recipes. A responsive website that uses Bootstrap to style and scale the elements on the page.",
     imgsrc: "static/img/cookwithchemistry-2.jpg",
     github: "https://github.com/NikZprojects/Food-Blog-Django",
     link: "https://www.cookwithchemistry.com",
