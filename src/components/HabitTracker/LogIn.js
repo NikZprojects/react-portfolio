@@ -1,4 +1,6 @@
-import React from "react";
+/*global gapi */
+
+import React, { useEffect } from "react";
 const axios = require("axios");
 
 export const LogIn = ({ setUser }) => {
@@ -13,9 +15,10 @@ export const LogIn = ({ setUser }) => {
   function onFailure(error) {
     console.log(error);
   }
-  function renderButton() {
-    window?.gapi?.signin2?.render("my-signin2", {
+  useEffect(() => {
+    window.gapi.signin2.render("my-signin2", {
       scope: "profile email",
+      width: "responsive",
       width: 240,
       height: 50,
       longtitle: true,
@@ -23,8 +26,8 @@ export const LogIn = ({ setUser }) => {
       onsuccess: onSuccess,
       onfailure: onFailure
     });
-  }
-  renderButton();
+  }, [window.gapi]);
+
   return (
     <div className="wrapper">
       <h1> React Habit Tracker </h1>
