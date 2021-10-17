@@ -1,5 +1,3 @@
-/*global gapi */
-
 import React, { useEffect } from "react";
 const axios = require("axios");
 
@@ -16,7 +14,7 @@ export const LogIn = ({ setUser }) => {
     console.log(error);
   }
   useEffect(() => {
-    window.gapi.signin2.render("my-signin2", {
+    window.gapi?.signin2.render("my-signin2", {
       scope: "profile email",
       width: "responsive",
       width: 240,

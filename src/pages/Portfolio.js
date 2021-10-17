@@ -1,5 +1,6 @@
 import "../css/Portfolio.css";
 import { useRef } from "react";
+import Metadata from "../components/Portfolio/Metadata";
 import Header from "../components/Portfolio/0-Header";
 import Name from "../components/Portfolio/1-Name";
 import About from "../components/Portfolio/2-About";
@@ -13,23 +14,26 @@ function Portfolio() {
   const contactRef = useRef();
 
   return (
-    <div className="Portfolio">
-      <Header
-        aboutRef={aboutRef}
-        projectsRef={projectsRef}
-        contactRef={contactRef}
-      />
-      <div className="outerblock">
-        <Name />
-        <div ref={aboutRef}></div>
-        <About />
-        <div ref={projectsRef}></div>
-        <Projects />
-        <div ref={contactRef}></div>
-        <Contact />
-        <Footer />
+    <>
+      <Metadata />
+      <div className="Portfolio">
+        <Header
+          aboutRef={aboutRef}
+          projectsRef={projectsRef}
+          contactRef={contactRef}
+        />
+        <div className="outerblock">
+          <Name />
+          <div ref={aboutRef}></div>
+          <About />
+          <div ref={projectsRef}></div>
+          <Projects />
+          <div ref={contactRef}></div>
+          <Contact />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

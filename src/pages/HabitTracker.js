@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../css/HabitTracker.css";
+import Metadata from "../components/HabitTracker/Metadata";
 import { LogIn } from "../components/HabitTracker/LogIn";
 import { Header } from "../components/HabitTracker/Header";
 import { AddHabit } from "../components/HabitTracker/AddHabit";
@@ -37,36 +38,39 @@ function HabitTracker() {
   }, [user]);
 
   return (
-    <div className="habitTracker">
-      {!user ? (
-        <LogIn setUser={setUser} />
-      ) : (
-        <>
-          <Header
-            user={user}
-            setUser={setUser}
-            monthView={monthView}
-            setMonthView={setMonthView}
-          />
-          <AddHabit
-            user={user}
-            habitList={habitList}
-            setHabitList={setHabitList}
-          />
-          <DeleteButton
-            user={user}
-            habitList={habitList}
-            setHabitList={setHabitList}
-          />
-          <HabitTable
-            user={user}
-            monthView={monthView}
-            habitList={habitList}
-            setHabitList={setHabitList}
-          />
-        </>
-      )}
-    </div>
+    <>
+      <Metadata />
+      <div className="habitTracker">
+        {!user ? (
+          <LogIn setUser={setUser} />
+        ) : (
+          <>
+            <Header
+              user={user}
+              setUser={setUser}
+              monthView={monthView}
+              setMonthView={setMonthView}
+            />
+            <AddHabit
+              user={user}
+              habitList={habitList}
+              setHabitList={setHabitList}
+            />
+            <DeleteButton
+              user={user}
+              habitList={habitList}
+              setHabitList={setHabitList}
+            />
+            <HabitTable
+              user={user}
+              monthView={monthView}
+              habitList={habitList}
+              setHabitList={setHabitList}
+            />
+          </>
+        )}
+      </div>
+    </>
   );
 }
 export default HabitTracker;
