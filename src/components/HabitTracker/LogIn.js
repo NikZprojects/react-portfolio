@@ -28,7 +28,7 @@ export const LogIn = ({ setUser }) => {
   }, [window.gapi]);
 
   useEffect(() => {
-    if (!localStorage.getItem("loaded")) {
+    if (!window.gapi?.signin2 && !localStorage.getItem("loaded")) {
       localStorage.setItem("loaded", true);
       window.location.reload();
     }
