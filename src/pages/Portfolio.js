@@ -1,6 +1,6 @@
 import "../css/Portfolio.css";
 import { useRef } from "react";
-import Metadata from "../components/Portfolio/Metadata";
+import Metadata from "../components/Portfolio/MetaData";
 import Header from "../components/Portfolio/0-Header";
 import Name from "../components/Portfolio/1-Name";
 import About from "../components/Portfolio/2-About";

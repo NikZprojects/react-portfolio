@@ -18,19 +18,19 @@ function HabitTracker() {
     if (mounted && user && user !== "guest") {
       axios
         .get("https://www.nikzprojects.com/apis/habits/" + user.habitDataID)
-        .then(response => {
+        .then((response) => {
           setHabitList(response.data);
         })
-        .catch(error => {
+        .catch((error) => {
           console.log(error);
         });
     } else if (mounted && !user) {
       axios
         .get("https://www.nikzprojects.com/apis/habits/")
-        .then(response => {
+        .then((response) => {
           setHabitList(response.data);
         })
-        .catch(error => {
+        .catch((error) => {
           console.log(error);
         });
     }
