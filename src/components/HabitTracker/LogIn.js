@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 const axios = require("axios");
 
 export const LogIn = ({ setUser }) => {
+  const [loaded, setLoaded] = useState(false);
   function onSuccess(googleUser) {
     var id_token = { id_token: googleUser.getAuthResponse().id_token };
 
@@ -15,6 +16,13 @@ export const LogIn = ({ setUser }) => {
   }
 
   useEffect(() => {
+    if (loaded && !localStorage.getItem("loaded")) {
+      localStorage.setItem("loaded", true);
+      window.location.reload();
+    }
+  }, [loaded]);
+
+  useEffect(() => {
     window.gapi?.signin2.render("my-signin2", {
       scope: "profile email",
       width: "responsive",
@@ -25,13 +33,7 @@ export const LogIn = ({ setUser }) => {
       onsuccess: onSuccess,
       onfailure: onFailure,
     });
-  }, [window.gapi]);
-
-  useEffect(() => {
-    if (window.gapi?.signin2 && !localStorage.getItem("loaded")) {
-      localStorage.setItem("loaded", true);
-      window.location.reload();
-    }
+    setLoaded(true);
   }, [window.gapi]);
 
   return (
