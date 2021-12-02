@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 const axios = require("axios");
 
 export const LogIn = ({ setUser }) => {
+  const [loaded, setLoaded] = useState(false);
   function onSuccess(googleUser) {
     var id_token = { id_token: googleUser.getAuthResponse().id_token };
 
@@ -15,18 +16,21 @@ export const LogIn = ({ setUser }) => {
   }
 
   useEffect(() => {
-    setTimeout(() => {
-      window.gapi?.signin2.render("my-signin2", {
-        scope: "profile email",
-        width: "responsive",
-        width: 240,
-        height: 50,
-        longtitle: true,
-        theme: "dark",
-        onsuccess: onSuccess,
-        onfailure: onFailure,
-      });
-    }, 1000);
+    setTimeout(
+      () => {
+        window.gapi?.signin2.render("my-signin2", {
+          scope: "profile email",
+          width: "responsive",
+          width: 240,
+          height: 50,
+          longtitle: true,
+          theme: "dark",
+          onsuccess: onSuccess,
+          onfailure: onFailure,
+        });
+      },
+      !loaded ? 500 : 1
+    );
   });
 
   return (
