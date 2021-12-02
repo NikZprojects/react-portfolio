@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const Metadata = () => (
   <Helmet>
-    <script src="https://apis.google.com/js/platform.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta
       name="google-signin-client_id"
       content="193552029926-u74rfb1qh4pe5dnn8oqb15ku8hueojhm.apps.googleusercontent.com"
