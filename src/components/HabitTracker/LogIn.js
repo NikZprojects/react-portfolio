@@ -7,12 +7,19 @@ export const LogIn = ({ setUser }) => {
 
     axios
       .post("https://www.nikzprojects.com/apis/tokensignin", id_token)
-      .then(res => setUser(res.data));
+      .then((res) => setUser(res.data));
   }
 
   function onFailure(error) {
     console.log(error);
   }
+  useEffect(() => {
+    if (!localStorage.getItem("loaded")) {
+      localStorage.setItem("loaded", true);
+      window.location.reload();
+    }
+  }, []);
+
   useEffect(() => {
     window.gapi?.signin2.render("my-signin2", {
       scope: "profile email",
@@ -22,7 +29,7 @@ export const LogIn = ({ setUser }) => {
       longtitle: true,
       theme: "dark",
       onsuccess: onSuccess,
-      onfailure: onFailure
+      onfailure: onFailure,
     });
   }, [window.gapi]);
 
