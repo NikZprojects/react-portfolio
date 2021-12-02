@@ -13,12 +13,6 @@ export const LogIn = ({ setUser }) => {
   function onFailure(error) {
     console.log(error);
   }
-  useEffect(() => {
-    if (!localStorage.getItem("loaded")) {
-      localStorage.setItem("loaded", true);
-      window.location.reload();
-    }
-  }, []);
 
   useEffect(() => {
     window.gapi?.signin2.render("my-signin2", {
@@ -31,6 +25,13 @@ export const LogIn = ({ setUser }) => {
       onsuccess: onSuccess,
       onfailure: onFailure,
     });
+  }, [window.gapi]);
+
+  useEffect(() => {
+    if (!localStorage.getItem("loaded")) {
+      localStorage.setItem("loaded", true);
+      window.location.reload();
+    }
   }, [window.gapi]);
 
   return (
