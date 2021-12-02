@@ -25,3 +25,4 @@ yarn-error.log*
 
 # for habit tracker oauth key
 oauth2keys.json
+emailcred.json
