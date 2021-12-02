@@ -14,6 +14,8 @@ const Metadata = () => {
   return (
     <Helmet>
       <meta charset="utf-8" />
+      <script src="https://apis.google.com/js/platform.js"></script>
+
       <link rel="icon" href="/static/reactportfolio/favicon.ico" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#000000" />
