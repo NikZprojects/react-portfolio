@@ -15,17 +15,19 @@ export const LogIn = ({ setUser }) => {
   }
 
   useEffect(() => {
-    window.gapi?.signin2.render("my-signin2", {
-      scope: "profile email",
-      width: "responsive",
-      width: 240,
-      height: 50,
-      longtitle: true,
-      theme: "dark",
-      onsuccess: onSuccess,
-      onfailure: onFailure,
-    });
-  }, [window.gapi]);
+    setTimeout(() => {
+      window.gapi?.signin2.render("my-signin2", {
+        scope: "profile email",
+        width: "responsive",
+        width: 240,
+        height: 50,
+        longtitle: true,
+        theme: "dark",
+        onsuccess: onSuccess,
+        onfailure: onFailure,
+      });
+    }, 1000);
+  });
 
   return (
     <div className="wrapper">
