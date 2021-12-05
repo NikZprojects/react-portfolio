@@ -1,5 +1,4 @@
 import React from "react";
-const keys = require("./oauth2keys.json");
 
 const months = [
   "January",
@@ -13,7 +12,7 @@ const months = [
   "September",
   "October",
   "November",
-  "December"
+  "December",
 ];
 
 const handleMonthChange = (action, monthView, setMonthView) => {
@@ -40,9 +39,9 @@ const handleMonthChange = (action, monthView, setMonthView) => {
 
 const signOut = () => {
   const params = {
-    client_id: keys.web.client_id
+    client_id: process.env.REACT_APP_GOOGLE_ID_HABIT_TRACKER,
   };
-  window.gapi?.auth2?.init(params)?.then(GoogleAuth => {
+  window.gapi?.auth2?.init(params)?.then((GoogleAuth) => {
     GoogleAuth.signOut();
   });
 };

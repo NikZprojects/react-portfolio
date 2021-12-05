@@ -17,7 +17,7 @@ const handleDelete = (user, habitList, setHabitList) => {
       if (habit === habitList.length - 1) {
         axios
           .post(
-            "https://www.nikzprojects.com/apis/habits/" +
+            `${process.env.REACT_APP_DOMAIN}/habits/` +
               user.habitDataID +
               "/delete",
             {

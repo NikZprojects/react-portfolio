@@ -17,7 +17,7 @@ function HabitTracker() {
     let mounted = true;
     if (mounted && user && user !== "guest") {
       axios
-        .get("https://www.nikzprojects.com/apis/habits/" + user.habitDataID)
+        .get(`${process.env.REACT_APP_DOMAIN}/habits/` + user.habitDataID)
         .then((response) => {
           setHabitList(response.data);
         })
@@ -26,7 +26,7 @@ function HabitTracker() {
         });
     } else if (mounted && !user) {
       axios
-        .get("https://www.nikzprojects.com/apis/habits/")
+        .get(`${process.env.REACT_APP_DOMAIN}/habits/`)
         .then((response) => {
           setHabitList(response.data);
         })

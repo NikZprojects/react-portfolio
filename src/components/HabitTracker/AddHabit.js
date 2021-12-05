@@ -24,9 +24,7 @@ export const AddHabit = ({ user, habitList, setHabitList }) => {
     } else {
       axios
         .post(
-          "https://www.nikzprojects.com/apis/habits/" +
-            user.habitDataID +
-            "/add",
+          `${process.env.REACT_APP_DOMAIN}/habits/` + user.habitDataID + "/add",
           newHabit
         )
         .then((res) => setHabitList(res.data));
