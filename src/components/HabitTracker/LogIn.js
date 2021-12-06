@@ -3,12 +3,14 @@ const axios = require("axios");
 
 export const LogIn = ({ setUser }) => {
   const [loaded, setLoaded] = useState(false);
-  function onSuccess(googleUser) {
+  async function onSuccess(googleUser) {
     var id_token = { id_token: googleUser.getAuthResponse().id_token };
 
-    axios
+    await axios
       .post(`${process.env.REACT_APP_DOMAIN}/tokensignin`, id_token)
-      .then((res) => setUser(res.data));
+
+      .then((res) => setUser(res.data))
+      .catch((err) => console.log(err));
   }
 
   function onFailure(error) {

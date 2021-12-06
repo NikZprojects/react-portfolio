@@ -10,7 +10,7 @@ const handleChange = (user, monthView, id, day, habitList, setHabitList) => {
     date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
 
   setHabitList(
-    habitList.map((habit) => {
+    habitList.map(async (habit) => {
       if (habit._id.toString() === id) {
         let completeData = habit.completionData.find(
           (data) => data.date === dateID
@@ -37,7 +37,7 @@ const handleChange = (user, monthView, id, day, habitList, setHabitList) => {
           complete: completeStatus,
         };
         if (user !== "guest") {
-          axios
+          await axios
             .post(
               `${process.env.REACT_APP_DOMAIN}/habits/` +
                 user.habitDataID +

@@ -9,7 +9,7 @@ export const AddHabit = ({ user, habitList, setHabitList }) => {
     setUserInput(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     let newHabit = {
@@ -22,7 +22,7 @@ export const AddHabit = ({ user, habitList, setHabitList }) => {
       newHabit._id = uuid();
       setHabitList([...habitList, newHabit]);
     } else {
-      axios
+      await axios
         .post(
           `${process.env.REACT_APP_DOMAIN}/habits/` + user.habitDataID + "/add",
           newHabit

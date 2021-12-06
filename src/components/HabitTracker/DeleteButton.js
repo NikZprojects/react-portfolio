@@ -1,7 +1,7 @@
 import React from "react";
 const axios = require("axios");
 
-const handleDelete = (user, habitList, setHabitList) => {
+const handleDelete = async (user, habitList, setHabitList) => {
   if (user === "guest") {
     setHabitList(
       habitList.filter((habit) => {
@@ -15,7 +15,7 @@ const handleDelete = (user, habitList, setHabitList) => {
         deleteHabitIDs.push(habitList[habit]._id);
       }
       if (habit === habitList.length - 1) {
-        axios
+        await axios
           .post(
             `${process.env.REACT_APP_DOMAIN}/habits/` +
               user.habitDataID +
