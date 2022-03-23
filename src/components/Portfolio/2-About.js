@@ -7,21 +7,36 @@ const About = () => {
       <h1 ref={titleRef}>About</h1>
       <div className="textblock center">
         <p>
-          I started programming in late 2019 as a way to diversify my current
-          skillset. It didn't take long before I found a passion for building
-          things online.
+          I started programming in 2019 in an attempt to broaden my skill set.
+          Before long, I was hooked on developing command-line games and tools
+          to make my life easier. Eventually I wanted a way to share my work
+          online, which lead me down the path of web development that has
+          continued to this day.
         </p>
+
         <p>
-          I first built a simple Flask website to share some of my Python
-          scripts online. From that experience, I was able to design and build a
-          food blog with Django at CookwithChemistry.com.
+          For the past year I have been developing websites as Full Stack
+          Developer at OptimaTrain. I fully developed{" "}
+          <a href="https://zscoreoffshore.com/">Z-Score Off Shore</a>, and
+          developed <a href="https://pay-gap.com/">Pay-Gap</a> and{" "}
+          <a href="https://csuitecomp.com/">C-Suite Comp</a> on a team of two.
+          Over 100,000 datapoints were collected for over 3,000 companies and
+          10,000 executives for these projects. Two full-stack applications were
+          developed to present this data to shed light on the pay gap between
+          CEOs and median employees (<a href="https://pay-gap.com/">Pay-Gap</a>)
+          and provide executive compensation breakdowns for compensation
+          analysts (<a href="https://csuitecomp.com/">C-Suite Comp</a> ).
         </p>
+
         <p>
-          Since then, I have been focused mainly on JavaScript and built a
-          single page React app to search through a friend's Instagram page in
-          early 2021. Most recently, I designed and built a habit tracker with
-          the MERN stack (MongoDB, Express, React, Node). This was designed as a
-          way to track my own habits and share how I do so with others.
+          Outside of work, I recently developed{" "}
+          <a href="https://joespub.xyz/">Joe's Pub</a>, a site designed to share
+          a menu, recipes, and search an instagram page. I have also included
+          some of my first web projects on this site:{" "}
+          <a href="https://cookwithchemistry.com/">Cook With Chemistry</a>, a
+          food blog developed with Django in mid-2020 and a{" "}
+          <a href="/HabitTracker">Habit Tracker</a> that I developed with React
+          in early 2021.
         </p>
       </div>
     </div>
