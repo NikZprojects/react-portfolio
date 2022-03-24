@@ -102,14 +102,12 @@
 
 .Portfolio .about a {
   text-decoration: none;
-  color: var(--header-text);
-  /* font-weight: bold; */
+  color: rgb(139, 226, 226);
 }
 
 .Portfolio .about a:hover {
-  /* text-decoration: none; */
-  text-decoration: underline;
-  color: var(--error);
+  /* text-decoration: underline; */
+  color: var(--hover);
 }
 
 /* Projects */
