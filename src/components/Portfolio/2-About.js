@@ -3,7 +3,7 @@ import { useRef } from "react";
 const About = () => {
   const titleRef = useRef();
   return (
-    <div>
+    <div className="about">
       <h1 ref={titleRef}>About</h1>
       <div className="textblock center">
         <p>
@@ -25,7 +25,7 @@ const About = () => {
           developed to present this data to shed light on the pay gap between
           CEOs and median employees (<a href="https://pay-gap.com/">Pay-Gap</a>)
           and provide executive compensation breakdowns for compensation
-          analysts (<a href="https://csuitecomp.com/">C-Suite Comp</a> ).
+          analysts (<a href="https://csuitecomp.com/">C-Suite Comp</a> .
         </p>
 
         <p>
