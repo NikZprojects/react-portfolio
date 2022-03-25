@@ -6,18 +6,28 @@ const projects = [
     description: "About C-Suite",
     imgsrc: "static/img/CsuiteLogo.png",
     link: "https://csuitecomp.com",
+    year: 2022,
+  },
+  {
+    name: "Joes Pub",
+    description: "About Joes Pub",
+    imgsrc: "static/img/JoesPubLogo.png",
+    link: "https://www.joespub.xyz",
+    year: 2022,
   },
   {
     name: "Z-Score Off-Shore",
     description: "About Z-Score.",
     imgsrc: "static/img/Z-Score Square Logo.png",
     link: "https://www.zscoreoffshore.com",
+    year: 2021,
   },
   {
     name: "Pay Gap",
     description: "About Pay-Gap.",
     imgsrc: "static/img/Pay-Gap Logo.png",
     link: "https://pay-gap.com",
+    year: 2021,
   },
   {
     name: "React Habit Tracker",
@@ -26,6 +36,7 @@ const projects = [
     imgsrc: "static/img/reacthabittracker.jpg",
     github: "https://github.com/NikZprojects/React-Habit-Tracker",
     link: "/HabitTracker",
+    year: 2021,
   },
   {
     name: "Instagram Search Bar",
@@ -34,6 +45,7 @@ const projects = [
     imgsrc: "static/img/instagram.jpg",
     github: "https://github.com/NikZprojects/Instagram-Search-Bar",
     link: "https://instagram.nikzprojects.com/",
+    year: 2020,
   },
   {
     name: "Food Blog Website",
@@ -42,23 +54,38 @@ const projects = [
     imgsrc: "static/img/cookwithchemistry-2.jpg",
     github: "https://github.com/NikZprojects/Food-Blog-Django",
     link: "https://www.cookwithchemistry.com",
+    year: 2020,
   },
 ];
+let year = Infinity;
+
+const displayYear = (projectYear) => {
+  if (year > projectYear) {
+    console.log(projectYear);
+    year = projectYear;
+    return <h1>{projectYear}</h1>;
+  } else {
+    return null;
+  }
+};
 
 const Projects = () => (
   <div>
     <h1>Projects</h1>
     {projects.map((p) => {
       return (
-        <Project
-          className="project"
-          key={p.name}
-          name={p.name}
-          description={p.description}
-          imgsrc={p.imgsrc}
-          github={p?.github}
-          link={p.link}
-        />
+        <>
+          <div>{displayYear(p.year)}</div>
+          <Project
+            className="project"
+            key={p.name}
+            name={p.name}
+            description={p.description}
+            imgsrc={p.imgsrc}
+            github={p?.github}
+            link={p.link}
+          />
+        </>
       );
     })}
   </div>
