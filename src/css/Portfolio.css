@@ -127,7 +127,7 @@
 .Portfolio img {
   width: 80%;
   max-width: 500px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   margin-top: 15px;
   /* margin: 5% auto; */
   /* padding: 5px; */

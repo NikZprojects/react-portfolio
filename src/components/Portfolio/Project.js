@@ -12,9 +12,11 @@ const Project = ({ name, description, imgsrc, github, link }) => (
       <h2>{name}</h2>
       <p>{description}</p>
       <div className="split">
-        <a href={github} className="button" target="_blank" rel="noreferrer">
-          Github
-        </a>
+        {github ? (
+          <a href={github} className="button" target="_blank" rel="noreferrer">
+            Github
+          </a>
+        ) : null}
         <a href={link} className="button">
           Link
         </a>
