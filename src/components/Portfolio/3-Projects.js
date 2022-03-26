@@ -4,28 +4,28 @@ const projects = [
   {
     name: "C-Suite Comp",
     description: "About C-Suite",
-    imgsrc: "static/img/CsuiteLogo.png",
+    imgsrc: "static/img/c-suite.png",
     link: "https://csuitecomp.com",
     year: 2022,
   },
   {
     name: "Joes Pub",
     description: "About Joes Pub",
-    imgsrc: "static/img/JoesPubLogo.png",
+    imgsrc: "static/img/joes-pub.png",
     link: "https://www.joespub.xyz",
     year: 2022,
   },
   {
     name: "Z-Score Off-Shore",
     description: "About Z-Score.",
-    imgsrc: "static/img/Z-Score Square Logo.png",
+    imgsrc: "static/img/z-score.png",
     link: "https://www.zscoreoffshore.com",
     year: 2021,
   },
   {
     name: "Pay Gap",
     description: "About Pay-Gap.",
-    imgsrc: "static/img/Pay-Gap Logo.png",
+    imgsrc: "static/img/pay-gap_dark.png",
     link: "https://pay-gap.com",
     year: 2021,
   },
@@ -38,15 +38,15 @@ const projects = [
     link: "/HabitTracker",
     year: 2021,
   },
-  {
-    name: "Instagram Search Bar",
-    description:
-      "A single page React app search bar built to search through a friend's Instagram recipes. Node backend makes calls to the Instagram Basic Display API to keep everything up-to-date.",
-    imgsrc: "static/img/instagram.jpg",
-    github: "https://github.com/NikZprojects/Instagram-Search-Bar",
-    link: "https://instagram.nikzprojects.com/",
-    year: 2020,
-  },
+  // {
+  //   name: "Instagram Search Bar",
+  //   description:
+  //     "A single page React app search bar built to search through a friend's Instagram recipes. Node backend makes calls to the Instagram Basic Display API to keep everything up-to-date.",
+  //   imgsrc: "static/img/instagram.jpg",
+  //   github: "https://github.com/NikZprojects/Instagram-Search-Bar",
+  //   link: "https://instagram.nikzprojects.com/",
+  //   year: 2020,
+  // },
   {
     name: "Food Blog Website",
     description:
