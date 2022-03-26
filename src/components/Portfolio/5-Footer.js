@@ -1,3 +1,5 @@
-const Footer = () => <p className="footer"> Nik Zagarella © 2021</p>;
+const Footer = () => (
+  <p className="footer"> Nikolas Zagarella &copy; {new Date().getFullYear()}</p>
+);
 
 export default Footer;

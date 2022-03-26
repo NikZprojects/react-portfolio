@@ -40,6 +40,10 @@
     width: 70%;
   }
 }
+.Portfolio h1 {
+  margin-top: 10;
+  margin-bottom: 0;
+}
 .Portfolio {
   text-align: center;
   background-color: var(--body-bg);
@@ -109,13 +113,33 @@
   /* text-decoration: underline; */
   color: var(--hover);
 }
+/* Name */
+
+.Portfolio .Name h1 {
+  font-size: calc(1.5rem + 1vw);
+  margin: 20px 0 20px;
+}
+.Portfolio .Name h3 {
+  font-size: calc(0.75rem + 0.7vw);
+  color: var(--body-text);
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--body-text);
+  line-height: 0.1em;
+  margin: 0px 0 10px;
+}
+
+.Portfolio .Name span {
+  background: var(--body-bg);
+  padding: 0 15px;
+}
 
 /* Projects */
-.Portfolio h1 {
-  margin: 15px;
-  font-size: 2.5rem;
+.Portfolio .Projects h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
 }
-.Portfolio h2 {
+.Portfolio .Projects h2 {
   margin: 10px;
   font-size: 1.75rem;
 }
@@ -132,6 +156,22 @@
   /* margin: 5% auto; */
   /* padding: 5px; */
 }
+.Portfolio .Projects h2.year {
+  width: 100%;
+  text-align: center;
+  color: var(--body-text);
+  border-bottom: 1px solid var(--body-text);
+  line-height: 0.1em;
+  margin: 20px 0 10px;
+}
+
+.Portfolio .Projects h2.year span {
+  background: var(--body-bg);
+  padding: 0 15px;
+}
+/* .Portfolio .Projects p {
+  color: var(--body-text);
+} */
 
 .Portfolio .button {
   padding: 10px;

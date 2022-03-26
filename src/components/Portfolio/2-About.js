@@ -19,13 +19,14 @@ const About = () => {
           Developer at OptimaTrain. I fully developed{" "}
           <a href="https://zscoreoffshore.com/">Z-Score Off Shore</a>, and
           developed <a href="https://pay-gap.com/">Pay-Gap</a> and{" "}
-          <a href="https://csuitecomp.com/">C-Suite Comp</a> on a team of two.
-          Over 100,000 datapoints were collected for over 3,000 companies and
-          10,000 executives for these projects. Two full-stack applications were
-          developed to present this data to shed light on the pay gap between
-          CEOs and median employees (<a href="https://pay-gap.com/">Pay-Gap</a>)
-          and provide executive compensation breakdowns for compensation
-          analysts (<a href="https://csuitecomp.com/">C-Suite Comp</a> .
+          <a href="https://csuitecomp.com/">C-Suite Comp</a> on a team with one
+          other developer. Over 100,000 datapoints were collected for over 3,000
+          companies and 10,000 executives for these projects. Two full-stack
+          applications were developed to present this data to shed light on the
+          pay gap between CEOs and median employees (
+          <a href="https://pay-gap.com/">Pay-Gap</a>) and provide executive
+          compensation breakdowns for compensation analysts (
+          <a href="https://csuitecomp.com/">C-Suite Comp</a>).
         </p>
 
         <p>

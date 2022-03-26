@@ -12,8 +12,8 @@ const projects = [
     name: "Joes Pub",
     description: "About Joes Pub",
     imgsrc: "static/img/joes-pub.png",
+    github: "https://github.com/NikZprojects/joes-pub-website",
     link: "https://www.joespub.xyz",
-    year: 2022,
   },
   {
     name: "Z-Score Off-Shore",
@@ -27,7 +27,6 @@ const projects = [
     description: "About Pay-Gap.",
     imgsrc: "static/img/pay-gap_dark.png",
     link: "https://pay-gap.com",
-    year: 2021,
   },
   {
     name: "React Habit Tracker",
@@ -36,7 +35,6 @@ const projects = [
     imgsrc: "static/img/reacthabittracker.jpg",
     github: "https://github.com/NikZprojects/React-Habit-Tracker",
     link: "/HabitTracker",
-    year: 2021,
   },
   // {
   //   name: "Instagram Search Bar",
@@ -57,25 +55,18 @@ const projects = [
     year: 2020,
   },
 ];
-let year = Infinity;
-
-const displayYear = (projectYear) => {
-  if (year > projectYear) {
-    console.log(projectYear);
-    year = projectYear;
-    return <h1>{projectYear}</h1>;
-  } else {
-    return null;
-  }
-};
 
 const Projects = () => (
-  <div>
+  <div className="Projects">
     <h1>Projects</h1>
     {projects.map((p) => {
       return (
         <>
-          <div>{displayYear(p.year)}</div>
+          {p?.year ? (
+            <h2 className="year">
+              <span>{p?.year}</span>
+            </h2>
+          ) : null}
           <Project
             className="project"
             key={p.name}
