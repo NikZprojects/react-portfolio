@@ -20,7 +20,7 @@ const SignupSchema = Yup.object().shape({
 
 const submitForm = async (values, actions, setIsSent) => {
   setTimeout(async () => {
-    await axios.post("http://www.nikzprojects.com/api/messages/", values);
+    await axios.post("https://www.nikzprojects.com/api/messages/", values);
     actions.setSubmitting(false);
     actions.resetForm({
       values: { name: "", email: "", message: "" },
