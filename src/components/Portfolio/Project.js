@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Project = ({ name, description, imgsrc, github, link, year }) => (
   <div className="split">

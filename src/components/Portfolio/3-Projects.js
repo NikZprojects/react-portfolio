@@ -63,9 +63,9 @@ const projects = [
 const Projects = () => (
   <div className="Projects">
     <h1>Projects</h1>
-    {projects.map((p) => {
+    {projects.map((p, i) => {
       return (
-        <>
+        <div key={i}>
           {p?.year ? (
             <h2 className="year">
               <span>{p?.year}</span>
@@ -73,14 +73,14 @@ const Projects = () => (
           ) : null}
           <Project
             className="project"
-            key={p.name}
+            key={i}
             name={p.name}
             description={p.description}
             imgsrc={p.imgsrc}
             github={p?.github}
             link={p.link}
           />
-        </>
+        </div>
       );
     })}
   </div>
