@@ -24,7 +24,6 @@ export const Habit = ({ user, habit, habitList, setHabitList }) => {
       onClick={handleClick}
       id={habit._id}
       key={habit._id}
-      style={{ habit }}
       className={
         habit.deleteHabit
           ? "inactiveCells + habit + strike"

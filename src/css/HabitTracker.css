@@ -3,6 +3,14 @@
   background-color: #222b35;
   color: white;
 }
+.habitTracker .habit:hover {
+  cursor: pointer;
+}
+
+.habitTracker .habit.strike {
+  color: red;
+  text-decoration: line-through;
+}
 
 .habitTracker .App-header {
   background-color: #282c34;
@@ -107,6 +115,7 @@
 .habitTracker .deleteButton {
   background-color: #571712;
   border: 1px solid #595959;
+  margin-bottom: 15px;
 }
 
 .habitTracker .wrapper {

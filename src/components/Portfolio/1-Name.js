@@ -1,6 +1,9 @@
 const Name = () => (
-  <div>
-    <h2>Hi there. I'm Nik.</h2>
+  <div className="Name">
+    <h1>Nikolas Zagarella</h1>
+    <h3>
+      <span>Full Stack Developer</span>
+    </h3>
   </div>
 );
 
