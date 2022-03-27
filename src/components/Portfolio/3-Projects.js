@@ -3,35 +3,39 @@ import Project from "./Project";
 const projects = [
   {
     name: "C-Suite Comp",
-    description: "About C-Suite",
+    description:
+      "Currently in Development. Collected executive compensation data for over 10,000 executives. Developed an interactive bar graph that breaks down compensation types and a line graph to show change in compensation since 2018. Developed filters for industry, sector, and more. Developed on a team with one other developer at OptimaTrain.",
     imgsrc: "static/img/c-suite.png",
     link: "https://csuitecomp.com",
     year: 2022,
   },
   {
     name: "Joes Pub",
-    description: "About Joes Pub",
+    description:
+      "Side project developed for my friend Joe. Provides a slide-show of his home bar’s history, an interactive menu, and a responsive search bar to search the cocktails he created and posted to Instagram by using the Instagram Basic Display API.",
     imgsrc: "static/img/joes-pub.png",
     github: "https://github.com/NikZprojects/joes-pub-website",
     link: "https://www.joespub.xyz",
   },
   {
     name: "Z-Score Off-Shore",
-    description: "About Z-Score.",
+    description:
+      "Single page website devloped to promote a consulting company. Designed the site from wireframe to final product with an animated logo and a contact form. Developed at OptimaTrain as a solo developer.",
     imgsrc: "static/img/z-score.png",
     link: "https://www.zscoreoffshore.com",
     year: 2021,
   },
   {
     name: "Pay Gap",
-    description: "About Pay-Gap.",
+    description:
+      "Collected CEO and median compensation data for over 3,000 companies. Table and graphs demonstrate the pay-gap between CEO and median compensation. Developed on a team with one other developer at OptimaTrain.",
     imgsrc: "static/img/pay-gap_dark.png",
     link: "https://pay-gap.com",
   },
   {
     name: "React Habit Tracker",
     description:
-      "A full-stack React habit tracker app built with the ability to save data thanks to Google authentication, an Express API, and a MongoDB database.",
+      "A full-stack React application with the ability to log in with Google oAuth, and save data with an Express API and MongoDB database.",
     imgsrc: "static/img/reacthabittracker.jpg",
     github: "https://github.com/NikZprojects/React-Habit-Tracker",
     link: "/HabitTracker",
