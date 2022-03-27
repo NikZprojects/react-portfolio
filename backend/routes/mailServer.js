@@ -4,7 +4,7 @@ require("dotenv").config({ path: "../.env" });
 
 const emailcred = JSON.parse(process.env.EMAILCRED);
 
-const sendMessage = (message) => {
+const sendMessage = async (message) => {
   async function main() {
     let transporter = nodemailer.createTransport({
       service: "hotmail",
