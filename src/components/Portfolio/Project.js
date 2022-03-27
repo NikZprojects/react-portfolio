@@ -1,6 +1,13 @@
 import React from "react";
 
-const Project = ({ name, description, imgsrc, github, link, year }) => (
+const Project = ({
+  name,
+  description,
+  imgsrc,
+  github,
+  link,
+  inDevelopment,
+}) => (
   <div className="split">
     <div className="half">
       <a href={link}>
@@ -9,7 +16,9 @@ const Project = ({ name, description, imgsrc, github, link, year }) => (
     </div>
     <div className="half">
       <h2>{name}</h2>
-      <p>{description}</p>
+      <p>
+        {inDevelopment ? <i>Currently in development.</i> : null} {description}
+      </p>
       <div className="split">
         {github ? (
           <a href={github} className="button" target="_blank" rel="noreferrer">

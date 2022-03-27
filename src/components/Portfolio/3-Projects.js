@@ -4,15 +4,16 @@ const projects = [
   {
     name: "C-Suite Comp",
     description:
-      "Currently in Development. Collected executive compensation data for over 10,000 executives. Developed an interactive bar graph that breaks down compensation types and a line graph to show change in compensation since 2018. Developed filters for industry, sector, and more. Developed on a team with one other developer at OptimaTrain.",
+      "Collected executive compensation data for over 10,000 executives. Developed an interactive bar graph that breaks down compensation types and a line graph to show change in compensation since 2018. Developed filters for industry, sector, and more. Developed on a team with one other developer at OptimaTrain.",
     imgsrc: "static/img/c-suite.png",
     link: "https://csuitecomp.com",
     year: 2022,
+    inDevelopment: true,
   },
   {
-    name: "Joes Pub",
+    name: "Joe's Pub",
     description:
-      "Side project developed for my friend Joe. Provides a slide-show of his home bar’s history, an interactive menu, and a responsive search bar to search the cocktails he created and posted to Instagram by using the Instagram Basic Display API.",
+      "A site built with Next.js to display a slide-show, an interactive menu, and a responsive search bar to search cocktails posted to Instagram using the Instagram Basic Display API.",
     imgsrc: "static/img/joes-pub.png",
     github: "https://github.com/NikZprojects/joes-pub-website",
     link: "https://www.joespub.xyz",
@@ -35,7 +36,7 @@ const projects = [
   {
     name: "React Habit Tracker",
     description:
-      "A full-stack React application with the ability to log in with Google oAuth, and save data with an Express API and MongoDB database.",
+      "A full-stack React application with the ability to log in with Google oAuth, and the ability save data with an Express API and MongoDB database.",
     imgsrc: "static/img/reacthabittracker.jpg",
     github: "https://github.com/NikZprojects/React-Habit-Tracker",
     link: "/HabitTracker",
@@ -79,6 +80,7 @@ const Projects = () => (
             imgsrc={p.imgsrc}
             github={p?.github}
             link={p.link}
+            inDevelopment={p.inDevelopment}
           />
         </div>
       );

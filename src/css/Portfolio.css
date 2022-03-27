@@ -9,37 +9,6 @@
   --error: #fca160;
 }
 
-@media screen and (max-width: 1000px) {
-  .Portfolio .split {
-    width: 100%;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin: 8px auto;
-  }
-  .Portfolio .outerblock {
-    width: 90%;
-  }
-  .Portfolio .header-block {
-    width: 90%;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .Portfolio .split {
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 6fr 6fr;
-    margin: 15px auto;
-  }
-  .Portfolio .outerblock {
-    width: 70%;
-  }
-  .Portfolio .header-block {
-    width: 70%;
-  }
-}
 .Portfolio h1 {
   margin-top: 10;
   margin-bottom: 0;
@@ -77,16 +46,26 @@
   color: var(--header-text);
   border-bottom: 1px solid var(--body-header);
 }
+
+.Portfolio .split {
+  width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 8px auto;
+}
+
 .Portfolio .header-block {
+  width: 90%;
   display: grid;
   grid-template-columns: 2fr 2fr 6fr 2fr;
   max-width: 1500px;
 }
 
 .Portfolio .outerblock {
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
-
   max-width: 1500px;
 }
 
@@ -106,7 +85,9 @@
 
 .Portfolio .about a {
   text-decoration: none;
-  color: rgb(139, 226, 226);
+  font-weight: bold;
+  /* color: rgb(141, 250, 177); */
+  color: white;
 }
 
 .Portfolio .about a:hover {
@@ -143,7 +124,13 @@
   margin: 10px;
   font-size: 1.75rem;
 }
-
+.Portfolio .Projects p {
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+  /* color: var(--body-text); */
+}
 .Portfolio .half {
   display: inline-block;
   width: 100%;
@@ -169,12 +156,8 @@
   background: var(--body-bg);
   padding: 0 15px;
 }
-/* .Portfolio .Projects p {
-  color: var(--body-text);
-} */
 
 .Portfolio .button {
-  padding: 10px;
   width: 20%;
   min-width: 80px;
   background-color: #a7cdfb;
@@ -217,7 +200,7 @@
   box-sizing: border-box;
   height: 100px;
 }
-.Portfolio button {
+.Portfolio .contactButton {
   width: 100%;
   max-width: 750px;
   padding: 12px 20px;
@@ -254,4 +237,21 @@
   width: 90%;
   color: #d2e7fe;
   text-align: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .Portfolio .split {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 6fr 6fr;
+    margin: 15px auto;
+  }
+  .Portfolio .outerblock {
+    width: 70%;
+  }
+  .Portfolio .header-block {
+    width: 70%;
+  }
 }

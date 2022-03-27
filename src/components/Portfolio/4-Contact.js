@@ -58,7 +58,11 @@ const FormikForm = () => {
             />
             <ErrorMessage name="message" component="div" className="error" />
 
-            <button type="submit" disabled={isSubmitting}>
+            <button
+              type="submit"
+              className="contactButton"
+              disabled={isSubmitting}
+            >
               Submit
             </button>
             {isSent ? (
