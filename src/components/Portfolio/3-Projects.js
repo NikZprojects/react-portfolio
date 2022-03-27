@@ -21,7 +21,7 @@ const projects = [
   {
     name: "Z-Score Off-Shore",
     description:
-      "Single page website devloped to promote a consulting company. Designed the site from wireframe to final product with an animated logo and a contact form. Developed at OptimaTrain as a solo developer.",
+      "Single page website developed to promote a consulting company. Designed the site from wireframe to final product with an animated logo and a contact form. Developed at OptimaTrain as a solo developer.",
     imgsrc: "static/img/z-score.png",
     link: "https://www.zscoreoffshore.com",
     year: 2021,
