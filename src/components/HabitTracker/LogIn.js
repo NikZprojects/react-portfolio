@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 const axios = require("axios");
 
 export const LogIn = ({ setUser }) => {
-  const [loaded, setLoaded] = useState(false);
+  const loaded = false; // can set to useState to improve load time
   async function onSuccess(googleUser) {
     var id_token = { id_token: googleUser.getAuthResponse().id_token };
 
@@ -22,7 +22,6 @@ export const LogIn = ({ setUser }) => {
       () => {
         window.gapi?.signin2.render("my-signin2", {
           scope: "profile email",
-          width: "responsive",
           width: 240,
           height: 50,
           longtitle: true,
