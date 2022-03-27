@@ -34,9 +34,9 @@ const sendMessage = async (message) => {
 router.route("/").post((req, res) => {
   try {
     sendMessage(req.body);
-    return res.status.send(200);
+    res.status(200).send("Success");
   } catch (err) {
-    return res.status.send(400).json("Error: " + err);
+    res.status(400).json("Error: " + err);
   }
 });
 
