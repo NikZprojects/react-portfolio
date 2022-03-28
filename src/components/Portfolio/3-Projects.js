@@ -13,7 +13,7 @@ const projects = [
   {
     name: "Joe's Pub",
     description:
-      "A site built with Next.js to display a slide-show, an interactive menu, and a responsive search bar to search cocktails posted to Instagram using the Instagram Basic Display API.",
+      "A site built with Next.js to display a slideshow, an interactive menu, and a responsive search bar to search cocktails posted to Instagram using the Instagram Basic Display API.",
     imgsrc: "static/img/joes-pub.png",
     github: "https://github.com/NikZprojects/joes-pub-website",
     link: "https://www.joespub.xyz",

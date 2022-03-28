@@ -15,7 +15,7 @@ const About = () => {
         </p>
 
         <p>
-          For the past year I have been developing websites as Full Stack
+          For the past year I have been developing websites as a Full Stack
           Developer at OptimaTrain. I fully developed{" "}
           <a href="https://zscoreoffshore.com/">Z-Score Off Shore</a>, and
           developed <a href="https://pay-gap.com/">Pay-Gap</a> and{" "}
