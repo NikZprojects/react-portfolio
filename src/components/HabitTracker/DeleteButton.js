@@ -31,7 +31,7 @@ const handleDelete = async (user, habitList, setHabitList) => {
 };
 
 export const DeleteButton = ({ user, habitList, setHabitList }) => {
-  if (habitList.some((habit) => habit.deleteHabit)) {
+  if (habitList?.length > 1 && habitList.some((habit) => habit.deleteHabit)) {
     return (
       <div>
         <button
