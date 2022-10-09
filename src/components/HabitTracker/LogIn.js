@@ -2,36 +2,24 @@ import React, { useEffect } from "react";
 const axios = require("axios");
 
 export const LogIn = ({ setUser }) => {
-  const loaded = false; // can set to useState to improve load time
-  async function onSuccess(googleUser) {
-    var id_token = { id_token: googleUser.getAuthResponse().id_token };
-
-    await axios
-      .post(`${process.env.REACT_APP_DOMAIN}/tokensignin`, id_token)
-
-      .then((res) => setUser(res.data))
-      .catch((err) => console.log(err));
-  }
-
-  function onFailure(error) {
-    console.log(error);
-  }
-
   useEffect(() => {
-    setTimeout(
-      () => {
-        window.gapi?.signin2.render("my-signin2", {
-          scope: "profile email",
-          width: 240,
-          height: 50,
-          longtitle: true,
-          theme: "dark",
-          onsuccess: onSuccess,
-          onfailure: onFailure,
-        });
-      },
-      !loaded ? 500 : 1
-    );
+    async function handleCredentialResponse(response) {
+      await axios
+        .post(`${process.env.REACT_APP_DOMAIN}/tokensignin`, response)
+        .then((res) => setUser(res.data))
+        .catch((err) => console.log(err));
+    }
+    window.onload = function () {
+      window.google.accounts.id.initialize({
+        client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
+        callback: handleCredentialResponse,
+      });
+      window.google.accounts.id.renderButton(
+        document.getElementById("buttonDiv"),
+        { theme: "outline", size: "large" } // customization attributes
+      );
+      window.google.accounts.id.prompt(); // also display the One Tap dialog
+    };
   });
 
   return (
@@ -41,7 +29,7 @@ export const LogIn = ({ setUser }) => {
         <h3> Sign in to keep track of your habits: </h3>
 
         <center>
-          <div id="my-signin2"></div>
+          <div id="buttonDiv"></div>
         </center>
 
         <br></br>

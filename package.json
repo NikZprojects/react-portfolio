@@ -12,6 +12,7 @@
     "express": "^4.17.1",
     "formik": "^2.2.6",
     "google-auth-library": "^7.10.3",
+    "jwt-decode": "^3.1.2",
     "mongoose": "^6.0.14",
     "nodemailer": "^6.5.0",
     "react": "^17.0.2",
@@ -22,7 +23,7 @@
     "yup": "^0.32.9"
   },
   "devDependencies": {
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

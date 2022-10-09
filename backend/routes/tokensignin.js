@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const jwtDecode = require("jwt-decode");
 let User = require("../models/user.model");
 let UserHabits = require("../models/userHabits.model");
 let Habit = require("../models/habit.model");
@@ -7,8 +8,9 @@ require("dotenv").config({ path: "../.env" });
 const { OAuth2Client } = require("google-auth-library");
 
 router.route("/").post((req, res) => {
-  const token = req.body.id_token;
-  const client = new OAuth2Client(process.env.GOOGLE_OAUTH_CLIENT_ID);
+  const token = req.body.credential;
+  const clientID = req.body.clientId;
+  const client = new OAuth2Client(clientID);
   async function verify() {
     const ticket = await client.verifyIdToken({
       idToken: token,
