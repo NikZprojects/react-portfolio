@@ -9,7 +9,8 @@ export const LogIn = ({ setUser }) => {
         .then((res) => setUser(res.data))
         .catch((err) => console.log(err));
     }
-    window.onload = function () {
+
+    window.onload = setTimeout(function () {
       window.google.accounts.id.initialize({
         client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
         callback: handleCredentialResponse,
@@ -19,7 +20,7 @@ export const LogIn = ({ setUser }) => {
         { theme: "outline", size: "large" } // customization attributes
       );
       window.google.accounts.id.prompt(); // also display the One Tap dialog
-    };
+    }, 250);
   });
 
   return (
