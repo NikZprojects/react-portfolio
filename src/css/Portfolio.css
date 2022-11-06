@@ -214,6 +214,9 @@
 .Portfolio button:hover {
   background-color: var(--body-text);
 }
+.Portfolio button:disabled {
+  background-color: var(--body-header);
+}
 .Portfolio .error {
   color: var(--error);
   margin: 0;
