@@ -28,7 +28,7 @@ const FormikForm = () => {
           `${process.env.REACT_APP_DOMAIN}/messages/`,
           values
         );
-        console.log(response);
+        // console.log(response);
         if (response.status === 200) {
           actions.resetForm({
             values: { name: "", email: "", message: "" },
