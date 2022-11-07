@@ -214,13 +214,17 @@
 .Portfolio button:hover {
   background-color: var(--body-text);
 }
+.Portfolio button:disabled {
+  background-color: var(--body-header);
+}
 .Portfolio .error {
   color: var(--error);
   margin: 0;
   padding: 0;
   font-size: 1.1rem;
 }
-.Portfolio .success {
+.Portfolio .success,
+.Portfolio .failed {
   color: var(--error);
   margin: 0;
   padding: 0;
