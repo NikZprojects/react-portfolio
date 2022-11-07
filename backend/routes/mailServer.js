@@ -6,8 +6,6 @@ require("dotenv").config({ path: "../.env" });
 const emailcred = JSON.parse(process.env.EMAILCRED);
 
 router.route("/").post((req, res) => {
-  // TODO: Handle failed cases, failed recaptcha, failed send, etc
-
   async function sendMessage(message) {
     const verifyUser = async (recaptcha) => {
       try {
@@ -19,7 +17,7 @@ router.route("/").post((req, res) => {
         return response.data;
       } catch (error) {
         console.log(error);
-        return error;
+        return res.status(400);
       }
     };
 
@@ -27,7 +25,7 @@ router.route("/").post((req, res) => {
       const isHuman = await verifyUser(message?.recaptcha);
       //Can use isHuman.success (default) or isHuman.score > [0-1.0], where 0 is robot, 1 is human
       if (!isHuman?.success) {
-        return res.status(400);
+        return res.status(400).send("Recaptcha error");
       }
       let transporter = nodemailer.createTransport({
         service: "hotmail",
@@ -49,9 +47,9 @@ router.route("/").post((req, res) => {
 
       console.log("Message sent: %s", info.messageId);
       console.log(info.response);
-      res.status(200).send("Success");
+      return res.status(200).send("Success");
     } catch (err) {
-      res.status(400).json("Error: " + err);
+      return res.status(400).json("Error: " + err);
     }
   }
   sendMessage(req.body);

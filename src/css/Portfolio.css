@@ -223,7 +223,8 @@
   padding: 0;
   font-size: 1.1rem;
 }
-.Portfolio .success {
+.Portfolio .success,
+.Portfolio .failed {
   color: var(--error);
   margin: 0;
   padding: 0;
