@@ -45,6 +45,7 @@ router.route("/").post((req, res) => {
       <pre style="font-family:verdana">${message.message}</pre>`,
       });
 
+      console.log("Recaptcha score:", isHuman.score);
       console.log("Message sent: %s", info.messageId);
       console.log(info.response);
       return res.status(200).send("Success");
