@@ -13,7 +13,7 @@ router.route("/").post((req, res) => {
           "https://www.google.com/recaptcha/api/siteverify",
           `secret=${process.env.GOOGLE_RECAPTCHA_SECRET_KEY}&response=${recaptcha}`
         );
-        console.log(response);
+        // console.log(response);
         return response.data;
       } catch (error) {
         console.log(error);
@@ -46,7 +46,7 @@ router.route("/").post((req, res) => {
       });
 
       console.log("Recaptcha score:", isHuman.score);
-      console.log("Message sent: %s", info.messageId);
+      console.log("Message sent: %s", info.messageId, new Date());
       console.log(info.response);
       return res.status(200).send("Success");
     } catch (err) {
