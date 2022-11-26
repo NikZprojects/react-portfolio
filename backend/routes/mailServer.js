@@ -24,7 +24,7 @@ router.route("/").post((req, res) => {
     try {
       const isHuman = await verifyUser(message?.recaptcha);
       //Can use isHuman.success (default) or isHuman.score > [0-1.0], where 0 is robot, 1 is human
-      if (!isHuman?.success) {
+      if (!isHuman?.success || isHuman.score <= 0.5) {
         return res.status(400).send("Recaptcha error");
       }
       let transporter = nodemailer.createTransport({
