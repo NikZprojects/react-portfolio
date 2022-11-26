@@ -49,7 +49,11 @@ router.route("/").post((req, res) => {
       console.log(
         "Message sent: %s",
         info.messageId,
-        new Date().toLocaleString("en-US", { timeZone: "America/New_York" })
+        new Date().toLocaleString(
+          "en-US",
+          { timeZone: "America/New_York" },
+          "EST"
+        )
       );
       console.log(info.response);
       return res.status(200).send("Success");
