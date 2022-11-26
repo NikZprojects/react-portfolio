@@ -46,7 +46,11 @@ router.route("/").post((req, res) => {
       });
 
       console.log("Recaptcha score:", isHuman.score);
-      console.log("Message sent: %s", info.messageId, new Date());
+      console.log(
+        "Message sent: %s",
+        info.messageId,
+        new Date().toLocaleString("en-US", { timeZone: "America/New_York" })
+      );
       console.log(info.response);
       return res.status(200).send("Success");
     } catch (err) {
