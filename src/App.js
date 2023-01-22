@@ -10,20 +10,21 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <GoogleReCaptchaProvider
-          reCaptchaKey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-        >
-          <div className="App">
-            <Switch>
-              <Route path="/HabitTracker">
-                <HabitTracker />
-              </Route>
-              <Route path="/">
+        <div className="App">
+          <Switch>
+            <Route path="/HabitTracker">
+              <HabitTracker />
+            </Route>
+
+            <Route path="/">
+              <GoogleReCaptchaProvider
+                reCaptchaKey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+              >
                 <Portfolio />
-              </Route>
-            </Switch>
-          </div>
-        </GoogleReCaptchaProvider>
+              </GoogleReCaptchaProvider>
+            </Route>
+          </Switch>
+        </div>
       </Router>
     </HelmetProvider>
   );
