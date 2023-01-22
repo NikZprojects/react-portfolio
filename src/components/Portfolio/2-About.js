@@ -7,11 +7,11 @@ const About = () => {
       <h1 ref={titleRef}>About</h1>
       <div className="textblock center">
         <p>
-          I started programming in 2019 in an attempt to broaden my skill set.
-          Before long, I was hooked on developing command-line games and tools
-          to make my life easier. Eventually I wanted a way to share my work
-          online, which lead me down the path of web development that has
-          continued to this day.
+          2+ year experienced React.js full-stack developer with data collection
+          and processing experience in Python. Comfortable using HTML, CSS, and
+          JavaScript to deliver interactive and responsive experiences to
+          customers. Passionate about learning new technologies and finding
+          creative solutions to technical problems.
         </p>
 
         <p>
@@ -20,7 +20,7 @@ const About = () => {
           <a href="https://zscoreoffshore.com/">Z-Score Off Shore</a>, and
           developed <a href="https://pay-gap.com/">Pay-Gap</a> and{" "}
           <a href="https://csuitecomp.com/">C-Suite Comp</a> on a team with one
-          other developer. Over 100,000 datapoints were collected for over 3,000
+          other developer. Over 100,000 datapoints were collected for over 4,000
           companies and 10,000 executives for these projects. Two full-stack
           applications were developed to present this data to shed light on the
           pay gap between CEOs and median employees (
