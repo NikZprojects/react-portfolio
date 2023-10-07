@@ -7,7 +7,7 @@ const About = () => {
       <h1 ref={titleRef}>About</h1>
       <div className="textblock center">
         <p>
-          2+ year experienced React.js full-stack developer with data collection
+          3+ year experienced React.js full-stack developer with data collection
           and processing experience in Python. Comfortable using HTML, CSS, and
           JavaScript to deliver interactive and responsive experiences to
           customers. Passionate about learning new technologies and finding
