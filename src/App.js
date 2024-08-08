@@ -12,7 +12,11 @@ function App() {
       <Router>
         <div className="App">
           <Switch>
-            <Route path="/HabitTracker">
+            <Route path="/habit-tracker">
+              <HabitTracker />
+            </Route>
+
+            <Route path="/habit-tracker-v2">
               <HabitTracker />
             </Route>
 

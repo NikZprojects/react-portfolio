@@ -2,6 +2,15 @@ import Project from "./Project";
 
 const projects = [
   {
+    name: "React Habit Tracker V2",
+    description:
+      "A full-stack React application with the ability to log in with Google OAuth, and the ability save data with an Express API and MongoDB database.",
+    imgsrc: "static/img/reacthabittracker.jpg",
+    year: 2024,
+    github: "https://github.com/NikZprojects/React-Habit-Tracker",
+    link: "/habit-tracker-v2",
+  },
+  {
     name: "C-Suite Comp",
     description:
       "Collected and formatted executive compensation data for over 10,000 executives and 4,000+ companies. Developed interactive bar graphs that break down compensation types and line graphs to show changes in compensation since 2018. Created filters for industry, sector, market cap, and more. Used Stripe API to handle customer checkout and subscriptions.",
@@ -39,7 +48,7 @@ const projects = [
       "A full-stack React application with the ability to log in with Google OAuth, and the ability save data with an Express API and MongoDB database.",
     imgsrc: "static/img/reacthabittracker.jpg",
     github: "https://github.com/NikZprojects/React-Habit-Tracker",
-    link: "/HabitTracker",
+    link: "/habit-tracker",
   },
   // {
   //   name: "Instagram Search Bar",
